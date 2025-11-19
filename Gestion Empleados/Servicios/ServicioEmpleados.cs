@@ -14,6 +14,10 @@ namespace Gestion_Empleados.Servicios
         {
             return _repo.ObtenerTodos();
         }
+        public Empleado? BuscarPorId(int id)
+        {
+            return _repo.BuscarPorId(id);
+        }
         public void Agregar(Empleado empleado)
         {
             _repo.Agregar(empleado);
@@ -26,5 +30,6 @@ namespace Gestion_Empleados.Servicios
         {
             _repo.EliminarPorId(id);
         }
+        
     }
 }

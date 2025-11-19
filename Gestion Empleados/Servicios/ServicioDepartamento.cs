@@ -13,6 +13,10 @@ namespace Gestion_Empleados.Servicios
         {
             return _repo.ObtenerTodos();
         }
+        public Departamento? BuscarPorId(int id)
+        {
+            return _repo.BuscarPorId(id);
+        }
         public void Agregar(Departamento departamento)
         {
             _repo.Agregar(departamento);
@@ -25,5 +29,6 @@ namespace Gestion_Empleados.Servicios
         {
             _repo.EliminarPorId(id);
         }
+        
     }
 }

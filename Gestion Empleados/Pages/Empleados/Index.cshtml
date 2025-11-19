@@ -1,0 +1,42 @@
+﻿@page
+@model Gestion_Empleados.Pages.Empleados.IndexModel
+
+
+<a asp-page="Create" class="btn btn-success mb-3">Agregar empleado</a>
+@if (Model.Empleados.Count == 0)
+{
+	<p class="text-muted">Aún no hay empleados cargados.</p>
+}
+else
+{
+	<table class="table">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Nombre</th>
+				<th>Apellido</th>
+				<th>EmailAddress</th>
+				<th>FechaContratacion</th>
+				<th>Salario</th>
+				<th>Acciones</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var empleado in Model.Empleados)
+			{
+				<tr>
+					<td>@empleado.Id</td>
+					<td>@empleado.Nombre</td>
+					<td>@empleado.Apellido</td>
+					<td>@empleado.EmailAddress</td>
+					<td>@empleado.FechaContratacion</td>
+					<td>@empleado.Salario</td>
+					<td>
+						<a asp-page="Edit" asp-route-id="@empleado.Id" class="btn btn-primary">Editar</a>
+						<a asp-page="Delete" asp-route-id="@empleado.Id" class="btn btn-danger">Eliminar</a>
+					</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+}

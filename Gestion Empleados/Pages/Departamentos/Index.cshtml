@@ -1,0 +1,36 @@
+﻿@page
+@model Gestion_Empleados.Pages.Departamentos.IndexModel
+@{
+}
+<a asp-page="Create" class="btn btn-success mb-3">Agregar Departamento</a>
+@if (Model.Departamentos.Count == 0)
+{
+	<p class="text-muted">Aún no hay Departamentos cargados.</p>
+}
+else
+{
+	<table class="table">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Nombre</th>
+				<th>Descripción</th>
+				<th>Acciones</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var departamento in Model.Departamentos)
+			{
+				<tr>
+					<td>@departamento.Id</td>
+					<td>@departamento.Nombre</td>
+					<td>@departamento.Descripcion</td>
+					<td>
+						<a asp-page="Edit" asp-route-id="@departamento.Id" class="btn btn-primary">Editar</a>
+						<a asp-page="Delete" asp-route-id="@departamento.Id" class="btn btn-danger">Eliminar</a>
+					</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+}

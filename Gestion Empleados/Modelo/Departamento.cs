@@ -9,7 +9,6 @@ namespace Gestion_Empleados.Modelo
         public string Nombre { get; set; }
         [Required(ErrorMessage = "Ingrese de que se encarga el departamento")]
         public string Descripcion { get; set; }
-        public Empleado Encargado { get; set; }
 
     }
 }

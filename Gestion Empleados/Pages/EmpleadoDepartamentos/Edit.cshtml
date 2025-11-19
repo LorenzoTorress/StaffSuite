@@ -1,0 +1,26 @@
+﻿@page
+@model Gestion_Empleados.Pages.EmpleadoDepartamentos.EditModel
+@{
+}
+<form method="post">
+    <input type="hidden" asp-for="EmpleadoDepartamento.Id" />
+    <div class="form-group">
+        <label asp-for="EmpleadoDepartamento.EmpleadoNombre"></label>
+        <select asp-for="EmpleadoDepartamento.EmpleadoNombre"
+                asp-items="Model.ListaEmpleados"
+                class="form-control">
+            <option value="">Seleccione una opción</option>
+        </select>
+        <span asp-validation-for="EmpleadoDepartamento.EmpleadoNombre" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="EmpleadoDepartamento.DepartamentoNombre"></label>
+        <select asp-for="EmpleadoDepartamento.DepartamentoNombre"
+                asp-items="Model.ListaDepartamentos"
+                class="form-control">
+            <option value="">Seleccione una opción</option>
+        </select>
+        <span asp-validation-for="EmpleadoDepartamento.DepartamentoNombre" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+</form>

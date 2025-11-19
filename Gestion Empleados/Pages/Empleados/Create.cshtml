@@ -1,0 +1,32 @@
+﻿@page
+@model Gestion_Empleados.Pages.Empleados.CreateModel
+@{
+}
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Empleado.Nombre"></label>
+        <input asp-for="Empleado.Nombre" class="form-control" />
+        <span asp-validation-for="Empleado.Nombre" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Empleado.Apellido"></label>
+        <input asp-for="Empleado.Apellido" class="form-control" />
+        <span asp-validation-for="Empleado.Apellido" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Empleado.EmailAddress"></label>
+        <input asp-for="Empleado.EmailAddress" class="form-control" />
+        <span asp-validation-for="Empleado.EmailAddress" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Empleado.FechaContratacion"></label>
+        <input asp-for="Empleado.FechaContratacion" class="form-control" />
+        <span asp-validation-for="Empleado.FechaContratacion" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Empleado.Salario"></label>
+        <input asp-for="Empleado.Salario" class="form-control" />
+        <span asp-validation-for="Empleado.Salario" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+</form>

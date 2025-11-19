@@ -7,7 +7,7 @@ namespace Gestion_Empleados.AccesoDatos
         private string ruta;
         public AccesoDatosJson(string nombreArchivo)
         {
-            ruta = $"Data/{nombreArchivo}.json";
+            ruta = $"Datos/{nombreArchivo}.json";
         }
         private string LeerTextoDelArchivo()
         {

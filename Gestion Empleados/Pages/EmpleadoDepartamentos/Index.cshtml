@@ -1,0 +1,34 @@
+﻿@page
+@model Gestion_Empleados.Pages.EmpleadoDepartamentos.IndexModel
+@{
+}
+<a asp-page="Create" class="btn btn-success mb-3">Asignar Encargado</a>"
+@if (Model.Encargado.Count == 0)
+{
+    <p class="text-muted">No hay encargados</p>
+}
+else
+{
+<table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Encargado</th>
+                <th>Departamento</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var encargado in Model.Encargado)
+            {
+                <tr>
+                    <td>@encargado.EmpleadoNombre</td>
+                    <td>@encargado.DepartamentoNombre</td>
+                    <td>
+                        <a asp-page="Edit" asp-route-id="@encargado.Id" class="btn btn-primary">Editar</a>
+                        <a asp-page="Delete" asp-route-id="@encargado.Id" class="btn btn-danger">Eliminar</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

@@ -1,0 +1,19 @@
+﻿@page
+@model Gestion_Empleados.Pages.EmpleadoDepartamentos.DeleteModel
+@{
+}
+<input type="hidden" asp-for="EmpleadoDepartamento.Id" />
+
+<form method="post">
+	<h4>¿Estas seguro que querés eliminar este encargado?</h4>
+
+	<div>
+		<strong>Empleado:</strong> @Model.EmpleadoDepartamento.EmpleadoNombre
+	</div>
+	<div>
+		<strong>Departamento:</strong> @Model.EmpleadoDepartamento.DepartamentoNombre
+	</div>
+	<br />
+	<button type="submit" class="btn btn-danger">Eliminar</button>
+	<a asp-page="Index" class="btn btn-secondary">Cancelar</a>
+</form>

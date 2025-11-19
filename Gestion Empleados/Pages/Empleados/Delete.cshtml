@@ -1,0 +1,28 @@
+﻿@page
+@model Gestion_Empleados.Pages.Empleados.DeleteModel
+@{
+}
+<input type="hidden" asp-for="Empleado.Id" />
+
+<form method="post">
+	<h4>¿Estas seguro que desea eliminar este Empleado?</h4>
+
+	<div>
+		<strong>Nombre:</strong> @Model.Empleado.Nombre
+	</div>
+	<div>
+		<strong>Apellido:</strong> @Model.Empleado.Apellido
+	</div>
+	<div>
+		<strong>DNI:</strong> @Model.Empleado.EmailAddress
+	</div>
+	<div>
+		<strong>Email:</strong> @Model.Empleado.FechaContratacion
+	</div>
+	<div>
+		<strong>Fecha de nacimiento:</strong> @Model.Empleado.FechaContratacion
+	</div>
+	<br />
+	<button type="submit" class="btn btn-danger">Eliminar</button>
+	<a asp-page="Index" class="btn btn-secondary">Cancelar</a>
+</form>
