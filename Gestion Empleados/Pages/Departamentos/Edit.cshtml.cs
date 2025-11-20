@@ -35,8 +35,5 @@ namespace Gestion_Empleados.Pages.Departamentos
             servicio.Editar(Departamento);
             return RedirectToPage("Index");
         }
-        public void OnGet()
-        {
-        }
     }
 }
